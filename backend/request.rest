@@ -1,0 +1,26 @@
+### Get semua catatan
+GET http://localhost:5000/
+
+### Get catatan berdasarkan ID
+GET http://localhost:5000/1
+
+### Tambah catatan
+POST http://localhost:5000/
+Content-Type: application/json
+
+{
+  "judul_Catatan": "ini belajar update",
+  "deskripsi_Catatan": "updatee"
+}
+
+### Update catatan
+PUT http://localhost:5000/1
+Content-Type: application/json
+
+{
+  "judul_Catatan": "ini belajar update",
+  "deskripsi_Catatan": "Mempelajari konsep dasar update cinta"
+}
+
+### Hapus catatan
+DELETE http://localhost:5000/12
