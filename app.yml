@@ -1,11 +1,10 @@
-runtime: python39  # digunakan hanya untuk static hosting
-
-handlers:
-  - url: /
-    static_files: index.html
-    upload: index.html
-
-  - url: /(.*)
-    static_files: \1
-    upload: (.*)
-
+steps:
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        echo "📂 Isi folder saat build:"
+        ls -la
+        gcloud app deploy app.yaml --quiet
+    dir: "."
