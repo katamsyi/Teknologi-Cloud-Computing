@@ -6,7 +6,8 @@ steps:
       - deploy
       - app.yaml
       - "--quiet"
-    dir: "frontend" # deploy dari root folder
+    dir: "."  # Gunakan root folder karena app.yaml dan index.html ada di sana
 
 options:
   logging: CLOUD_LOGGING_ONLY
+
