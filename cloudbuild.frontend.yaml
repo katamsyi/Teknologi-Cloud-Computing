@@ -1,11 +1,12 @@
 steps:
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: bash
+    entrypoint: gcloud
     args:
-      - -c
-      - |
-        echo "DEBUG: Isi folder saat build"
-        ls -la
-        gcloud app deploy app.yaml --quiet
-    dir: "."
+      - app
+      - deploy
+      - app.yaml
+      - "--quiet"
+    dir: "."  # karena app.yaml ada di root
 
+options:
+  logging: CLOUD_LOGGING_ONLY
