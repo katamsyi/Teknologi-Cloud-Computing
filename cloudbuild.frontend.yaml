@@ -6,7 +6,7 @@ steps:
       - deploy
       - app.yaml
       - "--quiet"
-    dir: "." # deploy dari root folder
+    dir: "frontend" # deploy dari root folder
 
 options:
   logging: CLOUD_LOGGING_ONLY
